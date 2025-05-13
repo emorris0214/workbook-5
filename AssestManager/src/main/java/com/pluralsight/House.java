@@ -19,14 +19,13 @@ public class House extends Asset {
 
     @Override
     public double getValue() {
-        double rate;
-        switch (condition) {
-            case 1: rate = 180.0; break;
-            case 2: rate = 130.0; break;
-            case 3: rate = 90.0; break;
-            case 4: rate = 80.0; break;
-            default: rate = 0.0;
-        }
+        double rate = switch (condition) {
+            case 1 -> 180.0;
+            case 2 -> 130.0;
+            case 3 -> 90.0;
+            case 4 -> 80.0;
+            default -> 0.0;
+        };
         return (rate * squareFoot) + (0.25 * lotSize);
     }
 }

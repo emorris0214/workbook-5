@@ -1,8 +1,8 @@
 package com.pluralsight;
 
 public class Asset {
-    private String description, dateAcquired;
-    private double originalCost;
+    protected String description, dateAcquired;
+    protected double originalCost;
 
     public Asset(String description, String dateAcquired, double originalCost) {
         this.description = description;
